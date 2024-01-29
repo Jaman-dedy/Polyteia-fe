@@ -10,6 +10,7 @@ import {
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 import { radarChartOptions } from '../../../helpers/chartsCommonOptions';
+import { dummyData } from '../../../constants/chartlabels';
 
 ChartJS.register(
   RadialLinearScale,
@@ -21,7 +22,7 @@ ChartJS.register(
 );
 
 export const data = {
-  labels: ['Thing 1', 'Thing 2', 'Thing 3', 'Thing 4', 'Thing 5', 'Thing 6'],
+  labels: dummyData,
   datasets: [
     {
       label: '# of Votes',

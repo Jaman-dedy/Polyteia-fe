@@ -13,14 +13,6 @@ import { scatterChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
-// const options = {
-//   scales: {
-//     y: {
-//       beginAtZero: true,
-//     },
-//   },
-// };
-
 export const data = {
   datasets: [
     {

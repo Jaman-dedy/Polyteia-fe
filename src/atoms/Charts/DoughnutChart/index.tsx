@@ -2,11 +2,12 @@ import { Grid } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { doughnutChartOptions } from '../../../helpers/chartsCommonOptions';
+import { colors } from '../../../constants/chartlabels';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: colors,
   datasets: [
     {
       label: '# of Votes',

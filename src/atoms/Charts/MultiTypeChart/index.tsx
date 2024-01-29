@@ -15,6 +15,7 @@ import { Chart } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker';
 import { Grid } from '@mui/material';
 import { multilineChartOptions } from '../../../helpers/chartsCommonOptions';
+import { months } from '../../../constants/chartlabels';
 
 ChartJS.register(
   LinearScale,
@@ -28,10 +29,8 @@ ChartJS.register(
   BarController
 );
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
 export const data = {
-  labels,
+  labels: months,
   datasets: [
     {
       type: 'line' as const,
@@ -39,13 +38,13 @@ export const data = {
       borderColor: 'rgb(255, 99, 132)',
       borderWidth: 2,
       fill: false,
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      data: months.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
     },
     {
       type: 'bar' as const,
       label: 'Dataset 2',
       backgroundColor: 'rgb(75, 192, 192)',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      data: months.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
       borderColor: 'white',
       borderWidth: 2,
     },
@@ -53,7 +52,7 @@ export const data = {
       type: 'bar' as const,
       label: 'Dataset 3',
       backgroundColor: 'rgb(53, 162, 235)',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      data: months.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
     },
   ],
 };
