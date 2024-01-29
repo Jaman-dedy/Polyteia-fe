@@ -28,7 +28,6 @@ const data2 = [
 export const MultipleYAxesScatterChart = () => {
   return (
     <ScatterChart
-      width={500}
       height={300}
       series={[
         {

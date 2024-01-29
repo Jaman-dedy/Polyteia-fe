@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { ChartContainer } from '@mui/x-charts/ChartContainer';
 import { ChartsReferenceLine } from '@mui/x-charts';
 import { LinePlot, MarkPlot } from '@mui/x-charts/LineChart';
@@ -20,8 +19,8 @@ const xLabels = [
 export const LineChartWithReferenceLines = () => {
   return (
     <ChartContainer
-      width={500}
-      height={300}
+      width={1000}
+      height={500}
       series={[
         { data: pData, label: 'pv', type: 'line' },
         { data: uData, label: 'uv', type: 'line' },

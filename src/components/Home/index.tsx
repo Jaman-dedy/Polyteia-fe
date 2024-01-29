@@ -4,7 +4,7 @@ import { Container, Grid, Typography } from "@mui/material"
 import MainTemplate from "../../template/MainTemplate"
 import MSelect from "../../atoms/Select"
 import { GraphType } from "../../types";
-import { graphComponents } from '../../atoms/Graphs'
+import { graphComponents } from '../../atoms/Charts'
 
 const Home = () => {
     const [selectedGraph, setSelectedGraph] = useState<GraphType | undefined>(undefined);

@@ -13,7 +13,6 @@ const data = [
 export const BasicScatterChart = ()  => {
   return (
     <ScatterChart
-      width={500}
       height={300}
       series={[{ data, label: 'pv', id: 'pvId' }]}
       xAxis={[{ min: 0 }]}

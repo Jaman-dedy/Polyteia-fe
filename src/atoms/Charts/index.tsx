@@ -1,6 +1,6 @@
 
 import {TwoLevelPieChart} from './TwoLevelPieChart';
-import { TwoSimplePieChart } from './TwoSimplePieChart/';
+import { TwoSimplePieChart } from './TwoSimplePieChart';
 import { StraightAnglePieChart } from './StraightAnglePieChart';
 import { StackedAreaChart } from './StackedAreaChart';
 import { PieChartWithPaddingAngle } from './PieChartWithPaddingAngle';
@@ -12,7 +12,13 @@ import { BasicScatterChart } from './BasicsScatter';
 import {BasicLineChart} from './BasicLineChart';
 import {BasicBars} from './BasicBars';
 import { AreaLineChart } from './AreaLineChart';
+import { PieChart } from './PieChart';
+import { HorizontalBarChart } from './HorizontalBarChart';
+import { StackedBar } from './StackedBar';
+import { LineChart } from './LineChart';
+
 import { GraphType } from '../../types';
+
 
 
 export const graphComponents: { [key in GraphType]: React.ComponentType<any> } = {
@@ -29,4 +35,8 @@ export const graphComponents: { [key in GraphType]: React.ComponentType<any> } =
     [GraphType.BasicLineChart]: BasicLineChart,
     [GraphType.BasicBars]: BasicBars,
     [GraphType.AreaLineChart]: AreaLineChart,
+    [GraphType.PieChart]: PieChart,
+    [GraphType.HorizontalBarChart]: HorizontalBarChart,
+    [GraphType.StackedBar]: StackedBar,
+    [GraphType.LineChart]: LineChart,
   };
