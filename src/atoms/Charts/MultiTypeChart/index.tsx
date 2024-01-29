@@ -14,6 +14,7 @@ import {
 import { Chart } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker';
 import { Grid } from '@mui/material';
+import { multilineChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(
   LinearScale,
@@ -60,7 +61,7 @@ export const data = {
 export const MultiTypeChart = () => {
   return (
   <Grid sm={10} md={10} lg={12}>
-     <Chart type='bar' data={data} />
+     <Chart options={multilineChartOptions} type='bar' data={data} />
   </Grid>
  
   );

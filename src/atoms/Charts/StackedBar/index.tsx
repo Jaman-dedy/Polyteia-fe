@@ -10,6 +10,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker'
 import { Grid } from '@mui/material';
+import { stackedChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(
   CategoryScale,
@@ -19,28 +20,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-export const options = {
-  plugins: {
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart - Stacked',
-    },
-  },
-  responsive: true,
-  interaction: {
-    mode: 'index' as const,
-    intersect: false,
-  },
-  scales: {
-    x: {
-      stacked: true,
-    },
-    y: {
-      stacked: true,
-    },
-  },
-};
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
@@ -71,7 +50,7 @@ export const data = {
 export const StackedBar = () => {
   return (
   <Grid sm={10} md={10} lg={12}>
-     <Bar options={options} data={data} />
+     <Bar options={stackedChartOptions} data={data} />
   </Grid>
  
   );

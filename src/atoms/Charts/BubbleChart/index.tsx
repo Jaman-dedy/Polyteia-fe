@@ -8,16 +8,9 @@ import {
 import { Bubble } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker';
 import { Grid } from '@mui/material';
+import { bubbleChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
-
-export const options = {
-  scales: {
-    y: {
-      beginAtZero: true,
-    },
-  },
-};
 
 export const data = {
   datasets: [
@@ -44,8 +37,8 @@ export const data = {
 
 export const BubbleChart = () => {
   return (
-  <Grid sm={12} md={8} lg={7}>
-    <Bubble options={options} data={data} />
+  <Grid sm={10} md={10} lg={12}>
+    <Bubble options={bubbleChartOptions} data={data} />
   </Grid>
   
   );

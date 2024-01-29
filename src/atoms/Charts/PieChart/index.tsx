@@ -1,6 +1,7 @@
-import { Grid, Stack } from '@mui/material';
+import { Grid } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import { pieChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -34,7 +35,7 @@ export const data = {
 export const PieChart = () => {
   return (
   <Grid sm={12} md={8} lg={7}>
-     <Pie data={data} />
+     <Pie options={pieChartOptions} data={data} />
   </Grid>
   );
 }

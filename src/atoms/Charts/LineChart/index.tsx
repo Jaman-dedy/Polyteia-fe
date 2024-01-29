@@ -11,6 +11,7 @@ import {
 import { Line } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker';
 import { Grid } from '@mui/material';
+import { lineChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(
   CategoryScale,
@@ -21,19 +22,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top' as const,
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
-    },
-  },
-};
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
@@ -58,7 +46,7 @@ export const data = {
 export const LineChart = () => {
   return (
   <Grid sm={10} md={10} lg={12}>
-    <Line options={options} data={data} />
+    <Line options={lineChartOptions} data={data} />
   </Grid>
   
   );

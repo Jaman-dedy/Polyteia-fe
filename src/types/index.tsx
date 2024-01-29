@@ -12,3 +12,16 @@ export enum GraphType {
   MultiTypeChart = "Multi Type Chart",
   VerticalBarChart = "Vertical Bar Chart"
 }
+
+export interface ChartOptions {
+  responsive: boolean;
+  plugins: {
+    legend: {
+      position: 'top';
+    };
+    title: {
+      display: boolean;
+      text?: string;
+    };
+  };
+}

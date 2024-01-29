@@ -7,6 +7,7 @@ import {
   Legend,
 } from 'chart.js';
 import { PolarArea } from 'react-chartjs-2';
+import { polarChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
@@ -32,7 +33,7 @@ export const data = {
 export const PolarAreaChart = () => {
   return (
   <Grid sm={12} md={8} lg={7}>
-    <PolarArea data={data} />
+    <PolarArea options={polarChartOptions} data={data} />
   </Grid>
   
   );

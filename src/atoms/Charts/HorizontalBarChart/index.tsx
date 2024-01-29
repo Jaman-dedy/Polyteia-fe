@@ -10,6 +10,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker'
 import { Grid } from '@mui/material';
+import { horizontalBarChartOptions } from '../../../helpers/chartsCommonOptions';
 
 ChartJS.register(
   CategoryScale,
@@ -19,25 +20,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
-export const options = {
-  indexAxis: 'y' as const,
-  elements: {
-    bar: {
-      borderWidth: 2,
-    },
-  },
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'right' as const,
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Horizontal Bar Chart',
-    },
-  },
-};
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
@@ -62,7 +44,7 @@ export const data = {
 export const HorizontalBarChart = () => {
   return (
   <Grid sm={10} md={10} lg={12}>
-     <Bar options={options} data={data} />
+     <Bar options={horizontalBarChartOptions} data={data} />
   </Grid>
  
   );
