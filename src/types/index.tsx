@@ -25,3 +25,20 @@ export interface ChartOptions {
     };
   };
 }
+
+export interface ChartTheme {
+  skyBlue: string;
+  darkSkyBlue: string;
+  pink: string;
+  darkPink: string;
+  darkYellow:string 
+  darkCyan:string 
+  darkStateBlue:string
+  darkOrange: string
+  lightPink:string
+  lightSkyBlue:string
+  lightOrange:string
+  lightCyan:string
+  lightStateBlue:string
+  orange:string
+}
