@@ -8,6 +8,7 @@ import {
 } from 'chart.js';
 import { Scatter } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker';
+import { Grid } from '@mui/material';
 
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
@@ -33,5 +34,10 @@ export const data = {
 };
 
 export const ScatterChart = ()  => {
-  return <Scatter options={options} data={data} />;
+  return (
+  <Grid sm={10} md={10} lg={12}>
+     <Scatter options={options} data={data} />
+  </Grid>
+ 
+  );
 }

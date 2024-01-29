@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -29,5 +30,10 @@ export const data = {
 };
 
 export const PolarAreaChart = () => {
-  return <PolarArea data={data} />;
+  return (
+  <Grid sm={12} md={8} lg={7}>
+    <PolarArea data={data} />
+  </Grid>
+  
+  );
 }

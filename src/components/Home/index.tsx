@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import type { SelectChangeEvent} from "@mui/material";
-import { Container, Grid, Typography } from "@mui/material"
+import type { SelectChangeEvent } from "@mui/material";
+import { Container, Grid, Stack, Typography } from "@mui/material"
 import MainTemplate from "../../template/MainTemplate"
 import MSelect from "../../atoms/Select"
 import { GraphType } from "../../types";
@@ -23,11 +23,11 @@ const Home = () => {
                     Hi, Welcome back 👋
                 </Typography>
                 <Grid container spacing={3}>
-                    <Grid xs={12} md={6} lg={4}>
+                    <Grid xs={12} md={6} lg={5}>
                         <MSelect selectedGraph={selectedGraph} onSelect={handleGraphChange} options={Object.values(GraphType)} />
                     </Grid>
-                    <Grid xs={12} md={6} lg={12}>
-                    {SelectedGraphComponent && <SelectedGraphComponent />}
+                    <Grid xs={12} md={6} lg={8}>
+                        {SelectedGraphComponent && <SelectedGraphComponent />}
                     </Grid>
                 </Grid>
             </Container>

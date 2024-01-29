@@ -17,13 +17,13 @@ import { VerticalBarChart } from './VerticalBarChart';
 
 export const graphComponents: { [key in GraphType]: React.ComponentType<any> } = {
     [GraphType.PieChart]: PieChart,
+    [GraphType.DoughnutChart]: DoughnutChart,
+    [GraphType.PolarAreaChart]: PolarAreaChart,
+    [GraphType.RadarChart]: RadarChart,
     [GraphType.HorizontalBarChart]: HorizontalBarChart,
     [GraphType.StackedBar]: StackedBar,
     [GraphType.AreaChart]: AreaChart,
     [GraphType.LineChart]: LineChart,
-    [GraphType.DoughnutChart]: DoughnutChart,
-    [GraphType.PolarAreaChart]: PolarAreaChart,
-    [GraphType.RadarChart]: RadarChart,
     [GraphType.ScatterChart]: ScatterChart,
     [GraphType.BubbleChart]: BubbleChart,
     [GraphType.MultiTypeChart]: MultiTypeChart,

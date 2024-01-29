@@ -9,6 +9,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker'
+import { Grid } from '@mui/material';
 
 ChartJS.register(
   CategoryScale,
@@ -51,5 +52,10 @@ export const data = {
 };
 
 export const VerticalBarChart = ()  => {
-  return <Bar options={options} data={data} />;
+  return (
+  <Grid sm={10} md={10} lg={12}>
+     <Bar options={options} data={data} />
+  </Grid>
+ 
+  );
 }

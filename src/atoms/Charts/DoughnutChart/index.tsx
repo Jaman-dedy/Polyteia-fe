@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
@@ -31,5 +32,10 @@ export const data = {
 };
 
 export const DoughnutChart = () => {
-  return <Doughnut data={data} />;
+  return (
+  <Grid sm={12} md={8} lg={7}>
+    <Doughnut data={data} />
+  </Grid>
+  
+  );
 }

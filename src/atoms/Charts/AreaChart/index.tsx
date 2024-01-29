@@ -11,6 +11,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import {faker} from '@faker-js/faker'
+import { Grid } from '@mui/material';
 
 ChartJS.register(
   CategoryScale,
@@ -52,5 +53,10 @@ export const data = {
 };
 
 export const AreaChart = () => {
-  return <Line options={options} data={data} />;
+  return (
+  <Grid sm={10} md={10} lg={12}>
+    <Line options={options} data={data} />
+  </Grid>
+  
+  );
 }

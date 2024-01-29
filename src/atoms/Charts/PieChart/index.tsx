@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 
@@ -33,9 +33,8 @@ export const data = {
 
 export const PieChart = () => {
   return (
-  <Stack direction="row" sx={{ width: '100%', height: '70vh' }}>
-    <Pie data={data} />
-  </Stack>
-  
+  <Grid sm={12} md={8} lg={7}>
+     <Pie data={data} />
+  </Grid>
   );
 }
