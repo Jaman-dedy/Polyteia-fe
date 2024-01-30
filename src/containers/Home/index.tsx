@@ -12,9 +12,8 @@ const Home = () => {
     console.log('randomData :>> ', randomData);
 
     useEffect(() => {
-        // dispatch(fetchNumericData())
        dispatch(fetchNumericData()) 
-        // dispatch(fetchRandomData())
+        dispatch(fetchRandomData())
     }, [dispatch])
 
     return (

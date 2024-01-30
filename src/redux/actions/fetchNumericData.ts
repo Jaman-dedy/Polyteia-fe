@@ -8,7 +8,7 @@ import {
 import { fetchApi } from '../../helpers/fetchApi';
 
 interface NumericData {
-    data: number;
+    data: Record<number, number>;
 }
 
 export const fetchNumericDataRequest = () => ({
@@ -31,6 +31,7 @@ export const fetchNumericData = () => {
 
         try {
             const data = await fetchApi(`pre-populated`, 'GET');
+            console.log('data :>> ', data);
             dispatch(fetchNumericDataSuccess(data));
         } catch (error: unknown) {
             if (error instanceof Error) {

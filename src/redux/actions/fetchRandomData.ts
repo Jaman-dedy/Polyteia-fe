@@ -29,16 +29,16 @@ export const fetchRandomData = () => {
   return async (dispatch: Dispatch) => {
     dispatch(fetchRandomDataRequest());
 
-    // try {
-    //   const data = await fetchApi(`/random`, 'GET');
-    //   dispatch(fetchRandomDataSuccess(data));
-    // } catch (error: unknown) {
-    //   if (error instanceof Error) {
-    //     dispatch(fetchRandomDataFailure(error.message));
-    //   }
-    //   else {
-    //     dispatch(fetchRandomDataFailure('An unknown error occurred'));
-    //   }
-    // }
+    try {
+      const data = await fetchApi(`random`, 'GET');
+      dispatch(fetchRandomDataSuccess(data));
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        dispatch(fetchRandomDataFailure(error.message));
+      }
+      else {
+        dispatch(fetchRandomDataFailure('An unknown error occurred'));
+      }
+    }
   };
 };
