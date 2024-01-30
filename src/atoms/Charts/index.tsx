@@ -6,6 +6,7 @@ import { LineChart } from './LineChart';
 import { DoughnutChart } from './DoughnutChart';
 import { PolarAreaChart } from './PolarAreaChart';
 
+import type { DataProps} from '../../types';
 import { GraphType } from '../../types';
 import { RadarChart } from './RadarChart';
 import { ScatterChart } from './ScatterChart';
@@ -15,7 +16,7 @@ import { VerticalBarChart } from './VerticalBarChart';
 
 
 
-export const graphComponents: { [key in GraphType]: React.ComponentType } = {
+export const graphComponents: { [key in GraphType]: React.FC<DataProps> } = {
     [GraphType.PieChart]: PieChart,
     [GraphType.DoughnutChart]: DoughnutChart,
     [GraphType.PolarAreaChart]: PolarAreaChart,

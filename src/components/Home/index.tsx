@@ -3,10 +3,12 @@ import type { SelectChangeEvent } from "@mui/material";
 import { Container, Grid, Typography } from "@mui/material"
 import MainTemplate from "../../template/MainTemplate"
 import MSelect from "../../atoms/Select"
+import type { DataProps} from "../../types";
 import { GraphType } from "../../types";
 import { graphComponents } from '../../atoms/Charts'
 
-const Home = () => {
+
+const Home: React.FC<DataProps> = ({numericData, randomData}) => {
     const [selectedGraph, setSelectedGraph] = useState<GraphType | undefined>(GraphType.BubbleChart);
 
     const handleGraphChange = (event: SelectChangeEvent<string>) => {
@@ -26,7 +28,7 @@ const Home = () => {
                         <MSelect selectedGraph={selectedGraph} onSelect={handleGraphChange} options={Object.values(GraphType)} />
                     </Grid>
                     <Grid xs={12} md={6} lg={8}>
-                        {SelectedGraphComponent && <SelectedGraphComponent />}
+                        {SelectedGraphComponent && <SelectedGraphComponent numericData={numericData} randomData={randomData} />}
                     </Grid>
                 </Grid>
             </Container>

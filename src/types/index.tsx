@@ -48,3 +48,8 @@ export interface InitialState {
   error: string | null;
   data: []
 }
+
+export interface DataProps {
+  numericData: number[];
+  randomData: number[];
+}

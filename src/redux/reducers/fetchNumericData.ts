@@ -25,7 +25,7 @@ import {
         return {
           ...state,
           loading: false,
-          numericData: action.payload?.data,
+          data: action.payload?.data,
         };
       case FETCH_NUMERIC_FAILURE:
         return {

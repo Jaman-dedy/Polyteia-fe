@@ -11,6 +11,7 @@ import { Bar } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { verticalChartOptions } from '../../../helpers/chartsCommonOptions';
 import { generateVerticalChartData } from '../../../helpers/provider/chartDatasetsProvider';
+import type { DataProps } from '../../../types';
 
 ChartJS.register(
   CategoryScale,
@@ -21,9 +22,8 @@ ChartJS.register(
   Legend
 );
 
-const data = generateVerticalChartData()
-
-export const VerticalBarChart = ()  => {
+export const VerticalBarChart: React.FC<DataProps> = ({numericData, randomData})  => {
+  const data = generateVerticalChartData(numericData, randomData)
   return (
   <Grid sm={10} md={10} lg={12}>
      <Bar options={verticalChartOptions} data={data} />

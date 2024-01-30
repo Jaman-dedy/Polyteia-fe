@@ -14,6 +14,7 @@ import { Chart } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { multilineChartOptions } from '../../../helpers/chartsCommonOptions';
 import { generateMultiChartData } from '../../../helpers/provider/chartDatasetsProvider';
+import type { DataProps } from '../../../types';
 
 ChartJS.register(
   LinearScale,
@@ -26,9 +27,9 @@ ChartJS.register(
   LineController,
   BarController
 );
-const data = generateMultiChartData()
 
-export const MultiTypeChart = () => {
+export const MultiTypeChart: React.FC<DataProps> = ({numericData, randomData}) => {
+  const data = generateMultiChartData(numericData, randomData)
   return (
   <Grid sm={10} md={10} lg={12}>
      <Chart options={multilineChartOptions} type='bar' data={data} />

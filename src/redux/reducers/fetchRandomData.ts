@@ -24,7 +24,7 @@ import {
         return {
           ...state,
           loading: false,
-          randomData: action.payload?.data,
+          data: action.payload?.data,
         };
       case FETCH_RANDOM_FAILURE:
         return {

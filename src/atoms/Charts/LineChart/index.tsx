@@ -12,6 +12,7 @@ import { Line } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { lineChartOptions } from '../../../helpers/chartsCommonOptions';
 import { generateLineChartData } from '../../../helpers/provider/chartDatasetsProvider';
+import type { DataProps } from '../../../types';
 
 ChartJS.register(
   CategoryScale,
@@ -23,9 +24,8 @@ ChartJS.register(
   Legend
 );
 
-const data = generateLineChartData()
-
-export const LineChart = () => {
+export const LineChart: React.FC<DataProps> = ({numericData, randomData}) => {
+  const data = generateLineChartData(numericData, randomData)
   return (
   <Grid sm={10} md={10} lg={12}>
     <Line options={lineChartOptions} data={data} />

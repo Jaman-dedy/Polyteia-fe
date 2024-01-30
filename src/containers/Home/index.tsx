@@ -8,16 +8,19 @@ const Home = () => {
     const dispatch = useAppDispatch();
     const numericData = useAppSelector((state: any) => state.numericData);
     const randomData = useAppSelector((state: any) => state.randomData);
-    console.log('numericData :>> ', numericData);
-    console.log('randomData :>> ', randomData);
 
     useEffect(() => {
-       dispatch(fetchNumericData()) 
-        dispatch(fetchRandomData())
-    }, [dispatch])
+        if (numericData.data.length === 0) {
+            dispatch(fetchNumericData())
+        }
+
+        if (randomData.data.length === 0) {
+            dispatch(fetchRandomData())
+        }
+    }, [dispatch, numericData.data.length, randomData.data.length])
 
     return (
-        <HomeComponent />
+        <HomeComponent numericData={numericData.data} randomData={randomData.data} />
     )
 }
 

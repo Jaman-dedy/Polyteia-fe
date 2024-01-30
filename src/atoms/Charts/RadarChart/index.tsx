@@ -11,6 +11,7 @@ import {
 import { Radar } from 'react-chartjs-2';
 import { radarChartOptions } from '../../../helpers/chartsCommonOptions';
 import { generateRadarChartData } from '../../../helpers/provider/chartDatasetsProvider';
+import type { DataProps } from '../../../types';
 
 ChartJS.register(
   RadialLinearScale,
@@ -20,9 +21,9 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-const data = generateRadarChartData()
 
-export const RadarChart = () => {
+export const RadarChart: React.FC<DataProps> = ({randomData}) => {
+  const data = generateRadarChartData(randomData)
   return (
   <Grid sm={12} md={8} lg={7}>
      <Radar options={radarChartOptions} data={data} />
