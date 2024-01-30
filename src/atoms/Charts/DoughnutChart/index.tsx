@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { doughnutChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generateDoughnutChartData } from '../../../helpers/chartDatasetsProvider';
+import { generateDoughnutChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 const data = generateDoughnutChartData()

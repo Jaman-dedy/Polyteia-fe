@@ -1,16 +1,19 @@
+import type { InitialState } from '../../types';
+import type {
+    NumericDataAction} from '../actionTypes/chartActionTypes';
 import {
     FETCH_NUMERIC_REQUEST,
     FETCH_NUMERIC_SUCCESS,
-    FETCH_NUMERIC_FAILURE,
+    FETCH_NUMERIC_FAILURE
   } from '../actionTypes/chartActionTypes';
   
-  const initialState = {
+  const initialState: InitialState = {
     data: [],
     loading: false,
     error: null,
   };
   
-  const numericDataReducer = (state = initialState, action: any) => {
+  const numericDataReducer = (state = initialState, action: NumericDataAction) => {
     switch (action.type) {
       case FETCH_NUMERIC_REQUEST:
         return {

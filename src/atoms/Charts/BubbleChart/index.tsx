@@ -8,7 +8,7 @@ import {
 import { Bubble } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { bubbleChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generateBubbleChartData } from '../../../helpers/chartDatasetsProvider';
+import { generateBubbleChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
 

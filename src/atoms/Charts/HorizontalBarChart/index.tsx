@@ -10,7 +10,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { horizontalBarChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generateHorizontalChartData } from '../../../helpers/chartDatasetsProvider';
+import { generateHorizontalChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(
   CategoryScale,

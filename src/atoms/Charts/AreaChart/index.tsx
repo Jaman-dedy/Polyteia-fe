@@ -12,7 +12,7 @@ import {
 import { Line } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { lineChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generateLineAreaChartData } from '../../../helpers/chartDatasetsProvider';
+import { generateLineAreaChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(
   CategoryScale,

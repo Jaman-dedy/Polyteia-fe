@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { colors, dummyData, months } from '../constants/chartlabels';
-import { theme } from '../themes';
+import { colors, dummyData, months } from '../../constants/chartlabels';
+import { theme } from '../../themes';
 
 export const generateLineAreaChartData = () => {
     return {

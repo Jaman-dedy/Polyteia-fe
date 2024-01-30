@@ -8,7 +8,7 @@ import {
 } from 'chart.js';
 import { PolarArea } from 'react-chartjs-2';
 import { polarChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generatePolarChartData } from '../../../helpers/chartDatasetsProvider';
+import { generatePolarChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 const data = generatePolarChartData()

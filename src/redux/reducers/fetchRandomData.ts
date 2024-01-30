@@ -1,7 +1,9 @@
+import type {
+    RandomDataAction} from '../actionTypes/chartActionTypes';
 import {
     FETCH_RANDOM_REQUEST,
     FETCH_RANDOM_SUCCESS,
-    FETCH_RANDOM_FAILURE,
+    FETCH_RANDOM_FAILURE
   } from '../actionTypes/chartActionTypes';
   
   const initialState = {
@@ -10,7 +12,7 @@ import {
     error: null,
   };
   
-  const numericDataReducer = (state = initialState, action: any) => {
+  const randomDataReducer = (state = initialState, action: RandomDataAction) => {
     switch (action.type) {
       case FETCH_RANDOM_REQUEST:
         return {
@@ -22,7 +24,7 @@ import {
         return {
           ...state,
           loading: false,
-          numericData: action.payload?.data,
+          randomData: action.payload?.data,
         };
       case FETCH_RANDOM_FAILURE:
         return {
@@ -35,5 +37,5 @@ import {
     }
   };
   
-  export default numericDataReducer;
+  export default randomDataReducer;
   

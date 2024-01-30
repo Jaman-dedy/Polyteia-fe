@@ -10,7 +10,7 @@ import {
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 import { radarChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generateRadarChartData } from '../../../helpers/chartDatasetsProvider';
+import { generateRadarChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(
   RadialLinearScale,

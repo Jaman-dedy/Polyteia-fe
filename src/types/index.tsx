@@ -42,3 +42,9 @@ export interface ChartTheme {
   lightStateBlue:string
   orange:string
 }
+
+export interface InitialState {
+  loading: boolean;
+  error: string | null;
+  data: []
+}

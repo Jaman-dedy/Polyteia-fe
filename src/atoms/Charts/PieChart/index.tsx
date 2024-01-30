@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { pieChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generatePieChartData } from '../../../helpers/chartDatasetsProvider';
+import { generatePieChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 

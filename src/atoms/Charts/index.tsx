@@ -15,7 +15,7 @@ import { VerticalBarChart } from './VerticalBarChart';
 
 
 
-export const graphComponents: { [key in GraphType]: React.ComponentType<any> } = {
+export const graphComponents: { [key in GraphType]: React.ComponentType } = {
     [GraphType.PieChart]: PieChart,
     [GraphType.DoughnutChart]: DoughnutChart,
     [GraphType.PolarAreaChart]: PolarAreaChart,

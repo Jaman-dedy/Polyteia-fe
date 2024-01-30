@@ -9,7 +9,7 @@ import {
 import { Scatter } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { scatterChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generateScatterChartData } from '../../../helpers/chartDatasetsProvider';
+import { generateScatterChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 

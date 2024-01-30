@@ -13,7 +13,7 @@ import {
 import { Chart } from 'react-chartjs-2';
 import { Grid } from '@mui/material';
 import { multilineChartOptions } from '../../../helpers/chartsCommonOptions';
-import { generateMultiChartData } from '../../../helpers/chartDatasetsProvider';
+import { generateMultiChartData } from '../../../helpers/provider/chartDatasetsProvider';
 
 ChartJS.register(
   LinearScale,
