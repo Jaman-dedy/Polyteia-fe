@@ -16,13 +16,10 @@ This React application is built using TypeScript and follows the Atomic Design p
 ## Table of Contents
 
 - [Features](#features)
-- [Project structure](#project-structure)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Running the Server](#running-the-server)
-- [API Documentation](#api-documentation)
-- [Testing](#testing)
 - [Built With](#built-with)
 
 ## Features
@@ -44,7 +41,7 @@ This React application is built using TypeScript and follows the Atomic Design p
 1. **Clone the Repository:**
 
    ```bash
-   git clone git@github.com:Jaman-dedy/mymo-api.git
+   git clone git@github.com:Jaman-dedy/Polyteia-fe.git
 
 
 2. **Navigate to the Project Directory:**
@@ -72,7 +69,10 @@ yarn dev
 
 ## Built with
 
-- [React && Ts](https://react.dev/learn/typescript)
-- [React material ui](https://styled-components.com/)
-- [Chart js](https://redux.js.org/usage/usage-with-typescript)
+- [React With Typescript](https://react.dev/learn/typescript)
+- [Redux With Typescript](https://redux.js.org/usage/usage-with-typescript)
+- [Vite](https://vitejs.dev/guide/)
+- [React material ui](https://mui.com/material-ui/getting-started/)
+- [Chart js](https://www.chartjs.org/docs/latest/)
+- [React Chart 2](https://react-chartjs-2.js.org/)
 - [Atomic design]()
