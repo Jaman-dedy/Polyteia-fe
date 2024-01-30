@@ -1,27 +1,78 @@
-# vite-template-redux
+# Mymoria-frontend-challenge
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+## Overview
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+This React application is built using TypeScript and follows the Atomic Design pattern. It incorporates various features and technologies to enhance functionality, maintainability, and user experience.
+
+## Guide overview
+
+1. Home page 
+
+- Mobile view
+
+2. Home page
+
+
+## Table of Contents
+
+- [Features](#features)
+- [Project structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Server](#running-the-server)
+- [API Documentation](#api-documentation)
+- [Testing](#testing)
+- [Built With](#built-with)
+
+## Features
+
+- Fetch numeric numbers
+- Fetch random numbers
+- Switch between chart by selecting
+- Refetch random data
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js: [Download and Install Node.js](https://nodejs.org/)
+- npm or yarn
+
+### Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone git@github.com:Jaman-dedy/mymo-api.git
+
+
+2. **Navigate to the Project Directory:**
+
+```bash
+cd your-project
+
 ```
 
-## Goals
+3. **Install Dependencies**
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+```bash
+yarn install
 
-## Scripts
+```
 
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
+## Running the Server
 
-## Inspiration
+1. **Locally**
 
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+```bash
+yarn dev
+
+```
+
+## Built with
+
+- [React && Ts](https://react.dev/learn/typescript)
+- [React material ui](https://styled-components.com/)
+- [Chart js](https://redux.js.org/usage/usage-with-typescript)
+- [Atomic design]()
