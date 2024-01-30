@@ -4,7 +4,7 @@ import {
 import "./App.css"
 import { Counter } from "./features/counter/Counter"
 import { Quotes } from "./features/quotes/Quotes"
-import logo from "./logo.svg"
+// import logo from "./logo.svg"
 import router from "./routes";
 
 import '@fontsource/roboto/300.css';
