@@ -19,8 +19,12 @@ const Home = () => {
         }
     }, [dispatch, numericData.data.length, randomData.data.length])
 
+    const handleRefresh = () => {
+        dispatch(fetchRandomData())
+    }
+
     return (
-        <HomeComponent numericData={numericData.data} randomData={randomData.data} />
+        <HomeComponent numericData={numericData.data} randomData={randomData.data} handleRefresh={handleRefresh} />
     )
 }
 

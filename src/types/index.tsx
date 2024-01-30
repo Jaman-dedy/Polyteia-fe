@@ -52,4 +52,5 @@ export interface InitialState {
 export interface DataProps {
   numericData: number[];
   randomData: number[];
+  handleRefresh?: () => void;
 }

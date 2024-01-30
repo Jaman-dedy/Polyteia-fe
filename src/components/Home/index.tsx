@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import type { SelectChangeEvent } from "@mui/material";
 import { Container, Grid, Typography } from "@mui/material"
+import RefreshIcon from '@mui/icons-material/Refresh';
 import MainTemplate from "../../template/MainTemplate"
 import MSelect from "../../atoms/Select"
-import type { DataProps} from "../../types";
+import type { DataProps } from "../../types";
 import { GraphType } from "../../types";
 import { graphComponents } from '../../atoms/Charts'
+import CustomizedButtons from '../../atoms/Button';
 
 
-const Home: React.FC<DataProps> = ({numericData, randomData}) => {
+const Home: React.FC<DataProps> = ({ numericData, randomData, handleRefresh }) => {
     const [selectedGraph, setSelectedGraph] = useState<GraphType | undefined>(GraphType.BubbleChart);
 
     const handleGraphChange = (event: SelectChangeEvent<string>) => {
@@ -26,6 +28,9 @@ const Home: React.FC<DataProps> = ({numericData, randomData}) => {
                 <Grid container spacing={3}>
                     <Grid xs={12} md={6} lg={5}>
                         <MSelect selectedGraph={selectedGraph} onSelect={handleGraphChange} options={Object.values(GraphType)} />
+                    </Grid>
+                    <Grid xs={12} md={6} lg={5}>
+                        <CustomizedButtons startIcon={<RefreshIcon />} label="Refresh" onClick={handleRefresh}/>
                     </Grid>
                     <Grid xs={12} md={6} lg={8}>
                         {SelectedGraphComponent && <SelectedGraphComponent numericData={numericData} randomData={randomData} />}
